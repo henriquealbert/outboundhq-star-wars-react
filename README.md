@@ -1,3 +1,5 @@
+ps: For me, Eslint and Prettier is considered a tooling and not an external lib.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
