@@ -1,4 +1,14 @@
+import { QueryClient, QueryClientProvider } from 'react-query';
 import { RoutesComponent } from 'Routes';
+
 import 'styles/global.css';
 
-export const App = () => <RoutesComponent />;
+const queryClient = new QueryClient();
+
+export const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RoutesComponent />
+    </QueryClientProvider>
+  );
+};
