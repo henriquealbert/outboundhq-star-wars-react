@@ -6,7 +6,7 @@ const fetchPeople = async (page = '1') => {
 };
 
 export function usePeople(page) {
-  return useQuery(['people', page], () => fetchPeople(page), {
+  return useQuery(['People', page], () => fetchPeople(page), {
     keepPreviousData: true
   });
 }
