@@ -7,14 +7,20 @@
 </h3>
 
 
-<p align="center">
- <a href="#about">About</a> •
- <a href="#features">Features</a> •
- <a href="#considerations">Considerations</a> •
- <a href="#how-to-start-the-project">How to start the Project</a> •
- <a href="#technologies">Technologies</a> •
- <a href="#author">Author</a>
-</p>
+<!-- TABLE OF CONTENTS -->
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about">About</a></li>
+    <li><a href="#features">Features</a></li>
+    <li><a href="#considerations">Considerations</a></li>
+    <li><a href="#how-to-start-the-project">How to start the Project</a></li>
+    <li><a href="#technologies">Technologies</a></li>
+    <li><a href="#author">Author</a></li>
+  </ol>
+</details>
+
+---
 
 
 ## 💻 About
