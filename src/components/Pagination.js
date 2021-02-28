@@ -1,33 +1,41 @@
 import { generatePages } from 'helper/generatePages';
+import { Button } from './Button';
+import { BiChevronsRight, BiChevronsLeft } from 'react-icons/bi';
+import { useAppContext } from 'contexts/AppContext';
 
 import styles from 'styles/components/Pagination.module.css';
 
-export const Pagination = ({ page, setPage, data, isPreviousData }) => {
+export const Pagination = ({ data, isPreviousData }) => {
+  const { page, setPage } = useAppContext();
+
   const pagesQuantity = Math.ceil(data.count / 10);
   const pagesArray = generatePages(1, pagesQuantity);
 
   return (
     <div className={styles.pagination}>
       <div className={styles.buttonsWrapper}>
-        <button
+        <Button
+          type="button"
           onClick={() => setPage((old) => Math.max(old - 1, 1))}
           disabled={page === 1}
         >
-          Previous Page
-        </button>
+          <BiChevronsLeft /> Previous Page
+        </Button>
 
         {pagesArray.map((pageBtn) => (
           // generating all page buttons
-          <button
+          <Button
+            type="button"
             key={pageBtn}
             onClick={() => setPage(pageBtn)}
             disabled={page === pageBtn}
           >
             {pageBtn}
-          </button>
+          </Button>
         ))}
 
-        <button
+        <Button
+          type="button"
           onClick={() => {
             if (!isPreviousData && data?.next) {
               setPage((old) => old + 1);
@@ -36,8 +44,8 @@ export const Pagination = ({ page, setPage, data, isPreviousData }) => {
           // Disable the Next Page button until we know a next page is available
           disabled={isPreviousData || !data?.next}
         >
-          Next Page
-        </button>
+          Next Page <BiChevronsRight />
+        </Button>
       </div>
 
       <p>Current Page: {page}</p>
