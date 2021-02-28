@@ -1,18 +1,15 @@
-import { useState } from 'react';
-
 import { Layout } from 'components/Layout';
 import { People } from 'components/People';
 import { Spinner } from 'components/Spinner';
-
-import { usePeople } from 'hooks/usePeople';
-
-import styles from 'styles/pages/Home.module.css';
 import { Pagination } from 'components/Pagination';
 import { Error } from 'components/Error';
+import { usePeople } from 'hooks/usePeople';
+import { useAppContext } from 'contexts/AppContext';
+
+import styles from 'styles/pages/Home.module.css';
 
 export const Home = () => {
-  const [page, setPage] = useState(1);
-
+  const { page } = useAppContext();
   const { data, isLoading, isError, error, isPreviousData } = usePeople(page);
 
   const sortedByName =
@@ -43,12 +40,7 @@ export const Home = () => {
             ))}
           </section>
 
-          <Pagination
-            page={page}
-            setPage={setPage}
-            data={data}
-            isPreviousData={isPreviousData}
-          />
+          <Pagination data={data} isPreviousData={isPreviousData} />
         </>
       )}
     </Layout>

@@ -1,11 +1,14 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import { Error } from 'components/Error';
 import { Layout } from 'components/Layout';
 import { Spinner } from 'components/Spinner';
 import { PeopleDetails } from 'components/PeopleDetails';
-
 import { usePeopleDetails } from 'hooks/usePeopleDetails';
+import { Button } from 'components/Button';
+import { BiLeftArrowAlt } from 'react-icons/bi';
+
+import styles from 'styles/pages/Details.module.css';
 
 export const Details = () => {
   const { id } = useParams();
@@ -13,15 +16,23 @@ export const Details = () => {
 
   return (
     <Layout>
-      <h1>Details</h1>
-      {isLoading && <Spinner />}
-      {isError && (
-        <p>
-          Error: <Error error={error} />
-        </p>
-      )}
+      <section className={styles.details}>
+        {isLoading && <Spinner />}
+        {isError && (
+          <p>
+            Error: <Error error={error} />
+          </p>
+        )}
 
-      {data && <PeopleDetails data={data} />}
+        {data && <PeopleDetails data={data} />}
+        <div className={styles.backBtn}>
+          <Link to="/">
+            <Button type="button">
+              <BiLeftArrowAlt /> Back
+            </Button>
+          </Link>
+        </div>
+      </section>
     </Layout>
   );
 };

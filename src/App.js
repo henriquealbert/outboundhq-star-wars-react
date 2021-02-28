@@ -1,3 +1,4 @@
+import { AppContextProvider } from 'contexts/AppContext';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 import { RoutesComponent } from 'Routes';
@@ -8,8 +9,10 @@ const queryClient = new QueryClient();
 
 export const App = () => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <RoutesComponent />
-    </QueryClientProvider>
+    <AppContextProvider>
+      <QueryClientProvider client={queryClient}>
+        <RoutesComponent />
+      </QueryClientProvider>
+    </AppContextProvider>
   );
 };

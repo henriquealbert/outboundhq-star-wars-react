@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import Avatar from 'avataaars';
 
-export const MyAvatar = ({ people }) => {
+export const MyAvatar = ({ people, width, height }) => {
   // if the character is male: BeardLight + BlazerShirt + ShortHairShortFlat
   // if the character is female: no beard + Pink ShirtVNeck + LongHairCurvy
   // if the character is n/a: no beard + Blue ShirtScoopNeck + NoHair
@@ -81,8 +81,8 @@ export const MyAvatar = ({ people }) => {
             : 'Serious'
         }
         style={{
-          width: '80px',
-          height: '80px'
+          width: width ? width : '80px',
+          height: height ? height : '80px'
         }}
       />
     </div>

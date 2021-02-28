@@ -1,12 +1,13 @@
 import { Link } from 'react-router-dom';
 import { HomeWorld } from './HomeWorld';
 import { MyAvatar } from './MyAvatar';
+import { extractID } from 'helper/extractID';
 
 import styles from 'styles/components/People.module.css';
 
 export const People = ({ people }) => {
-  const planetID = people.homeworld.replace(/[^0-9]/g, '');
-  const peopleID = people.url.replace(/[^0-9]/g, '');
+  const planetID = extractID(people.homeworld);
+  const peopleID = extractID(people.url);
 
   return (
     <Link to={`people/${peopleID}`}>

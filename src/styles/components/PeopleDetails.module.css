@@ -1,3 +1,4 @@
 .peopleDetails {
-  color: var(--success);
+  display: flex;
 }
+.peopleDetailsWrapper{}
