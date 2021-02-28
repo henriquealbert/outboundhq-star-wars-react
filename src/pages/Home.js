@@ -6,6 +6,8 @@ import { Spinner } from 'components/Spinner';
 
 import { usePeople } from 'hooks/usePeople';
 
+import styles from 'styles/pages/Home.module.css';
+
 export const Home = () => {
   const [page, setPage] = useState(1);
 
@@ -19,14 +21,19 @@ export const Home = () => {
 
   return (
     <Layout>
-      {isLoading && <Spinner />}
+      {isLoading && (
+        <div className="center">
+          <Spinner />
+        </div>
+      )}
 
       {isError && <p>Error: {error.message}</p>}
-
-      {data &&
-        sortedByName.map((people) => (
-          <People key={people.url} people={people} />
-        ))}
+      <section className={styles.peopleList}>
+        {data &&
+          sortedByName.map((people) => (
+            <People key={people.url} people={people} />
+          ))}
+      </section>
 
       {data && (
         <div>

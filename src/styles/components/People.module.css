@@ -1,0 +1,35 @@
+.people {
+  display: flex;
+  padding: 1rem;
+  background: var(--gray-light);
+  border-radius: 0.5rem;
+  align-items: center;
+  transition: all 150ms ease-in-out;
+}
+
+.people:hover {
+  box-shadow: 2px 6px 4px rgba(0, 0, 0, 0.25);
+  transform: scale(1.025);
+}
+
+.peopleInfo {
+  margin-left: 1rem;
+}
+
+.peopleInfo div {
+  display: flex;
+}
+
+.peopleInfo h4 {
+  color: var(--black);
+  font-size: 1.15rem;
+}
+
+.peopleInfo p {
+  font-size: 0.875rem;
+  color: var(--gray-dark);
+}
+
+.peopleInfo p + p {
+  margin-left: 0.5rem;
+}
