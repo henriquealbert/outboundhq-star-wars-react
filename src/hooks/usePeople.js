@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 
-const fetchPeople = async (page = '1') => {
+const fetchPeople = async (page) => {
   const res = await fetch(`http://swapi.dev/api/people/?page=${page}`);
   return res.json();
 };
