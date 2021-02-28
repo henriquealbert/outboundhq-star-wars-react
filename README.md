@@ -6,6 +6,7 @@
     A list of all Star Wars characters
 </h3>
 
+---
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
@@ -23,14 +24,14 @@
 ---
 
 
-## 💻 About
+## About
 
 🛸 Star Wars Characters - is an application for displaying characters from the Star Wars API (https://swapi.dev/). <br />
 [React assigment for OutboundHQ](https://gist.github.com/theill/8513e6cfce2e7b04cf7af80c8c6bdd8b)
 
 ---
 
-## ⚙️ Features
+## Features
 
 - [x] List all characters (people) sorted by name;
 - [x] Show a spinner while data is being loaded;
@@ -40,7 +41,7 @@
 - [x] Show "name" of character together with an avatar based on "gender", "hair_color", "eye_color" and "skin_color"
 
 ---
-## ✍🏻 Considerations
+## Considerations
 
 * <h4>What would you test in the app and how?</h4>
   <p>I would test each component using Jest and React Testing Library to make sure everything works and not breaks with future changes in the code.
@@ -70,7 +71,7 @@
 
 ---
 
-## 🚀 How to start the project
+## How to start the project
 
 ### - Pre-requisites:
 
@@ -79,7 +80,7 @@ Before you begin, you will need to have the following tools installed on your ma
 In addition, it is good to have an editor to work with the code like [VSCode] (https://code.visualstudio.com/)
 
 
-### 🧭 Running the web application (React)
+### Running the web application (React)
 
 ```bash
 
@@ -105,7 +106,7 @@ $ yarn start
 
 ---
 
-## 🛠 Technologies
+## Technologies
 
 The following tools were used in the construction of the project:
 
@@ -120,7 +121,7 @@ The following tools were used in the construction of the project:
 
 ---
 
-## 🦸 Author
+## Author
 
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/59376543?s=460&u=137df36a904881072eb6480658fbaa70c8971b7c&v=4" width="100px;" alt="Henrique Albert Schmaiske"/>
  <br />
