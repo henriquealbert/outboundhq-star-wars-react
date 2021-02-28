@@ -1,5 +1,4 @@
 import { QueryClient, QueryClientProvider } from 'react-query';
-import { ReactQueryDevtools } from 'react-query/devtools';
 
 import { RoutesComponent } from 'Routes';
 
@@ -11,7 +10,6 @@ export const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <RoutesComponent />
-      <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
 };

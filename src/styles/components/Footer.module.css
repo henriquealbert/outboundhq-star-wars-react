@@ -1,3 +1,18 @@
-.footerWrapper {
+.footer {
   margin-top: auto;
+}
+
+.footer p {
+  margin: 4rem 0 2rem;
+  text-align: center;
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+.footer span {
+  color: var(--error);
+}
+
+.footer a:hover {
+  text-decoration: underline;
 }
