@@ -1,72 +1,135 @@
-ps: For me, Eslint and Prettier is considered a tooling and not an external lib.
+<h1 align="center">
+   🛸 <a href="#">Star Wars Characters</a>
+</h1>
 
-# Getting Started with Create React App
+<h3 align="center">
+    A list of all Star Wars characters
+</h3>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<p align="center">
+ <a href="#about">About</a> •
+ <a href="#features">Features</a> •
+ <a href="#considerations">Considerations</a> •
+ <a href="#how-to-start-the-project">How to start the Project</a> •
+ <a href="#technologies">Technologies</a> •
+ <a href="#author">Author</a>
+</p>
 
-In the project directory, you can run:
 
-### `yarn start`
+## 💻 About
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+🛸 Star Wars Characters - is an application for displaying characters from the Star Wars API (https://swapi.dev/). <br />
+[React assigment for OutboundHQ](https://gist.github.com/theill/8513e6cfce2e7b04cf7af80c8c6bdd8b)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `yarn test`
+## ⚙️ Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [x] List all characters (people) sorted by name;
+- [x] Show a spinner while data is being loaded;
+- [x] Paginated list of characters;
+- [x] Display "name" and actual name of "homeworld" for each character in list;
+- [x] Go to a character details screen when tapping a single character;
+- [x] Show "name" of character together with an avatar based on "gender", "hair_color", "eye_color" and "skin_color"
 
-### `yarn build`
+---
+## ✍🏻 Considerations
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* <h4>What would you test in the app and how?</h4>
+  <p>I would test each component using Jest and React Testing Library to make sure everything works and not breaks with future changes in the code.
+  I also could use Cypress to do an integration test, to make sure that every user flow work as expected.
+  </p>
+* <h4>What feature(s) would you consider adding as next step?</h4>
+  <ol>
+    <li>Search button to find any character or planet.</li>
+    <li>More details about the planet, including the images, population, climate, gravity, diameter, orbital period  and so on.</li>
+    <li>Register/Login page for an user to create an account and mark as favorite your planet or character.</li>
+    <li>A live chat to fans of Star Wars interact to each other and talk about the movies, favorite characters and planets.</li>
+  </ol>
+* <h4>Why did you choose to use React-Query?</h4>
+  <p>To handle the API calls. This library gives to the app a cache control that optimizes and avoid excessive/unnecessary API calls.
+  It's super simple and familiar, based on React-Hooks, where you can avoid writing a lot of code and implementing a lot of complex logics. You can use it with GraphQL or REST APIs.</p>
+  <p>
+  The application doesn't have a lot of loading states between pages, because after you fetched some data it would be in cache, so if the user come back to a page that was already been loaded, there is no loading screen.
+  Also it improves the User Experience, that is the main focus to use it.
+  </p>
+* <h4>How did you handle the Character Avatars?</h4>
+  <p>I used the "avataaars" package, which creates an SVG image with the parameters you need.
+  Some of the parameters requested in the challenge, such as "gender" and "eye color", were not available for use on the packaging.</p>
+  <p>So, what did I do to deal with this?
+  I put a long hair for the female gender, a short hair for the male and no hair for robots or no genders.
+  For eye colors, I used React's "useRef" to interact with the "DOM" elements, I selected the circle in the svg that rendered the avatar's eyes and managed to change the eye color.
+  </p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 How to start the project
 
-### `yarn eject`
+### - Pre-requisites:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Before you begin, you will need to have the following tools installed on your machine:
+[Git] (https://git-scm.com), [Node.js] (https://nodejs.org/en/).
+In addition, it is good to have an editor to work with the code like [VSCode] (https://code.visualstudio.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 🧭 Running the web application (React)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
 
-## Learn More
+# Clone this repository
+$ git clone https://github.com/henriquealbert/outboundhq-star-wars-react.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Access the project folder in your terminal
+$ cd outboundhq-star-wars-react
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+# Install the dependencies
+$ npm install
+# or with yarn
+$ yarn install
 
-### Code Splitting
+# Run the application in development mode
+$ npm run start
+# or with yarn
+$ yarn start
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# The application will open on the port: 3000 - go to http://localhost:3000
 
-### Analyzing the Bundle Size
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🛠 Technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The following tools were used in the construction of the project:
 
-### Advanced Configuration
+-   **[React.js](https://github.com/facebook/create-react-app)**
+-   **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
+-   **[React-Query](https://github.com/tannerlinsley/react-query)**
+-   **[React Icons](https://react-icons.github.io/react-icons/)**
+-   **[Avataaars](https://github.com/fangpenlin/avataaars)**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> See the file  [package.json](https://github.com/henriquealbert/outboundhq-star-wars-react/blob/main/package.json)
 
-### Deployment
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `yarn build` fails to minify
+## 🦸 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/59376543?s=460&u=137df36a904881072eb6480658fbaa70c8971b7c&v=4" width="100px;" alt="Henrique Albert Schmaiske"/>
+ <br />
+ <sub><b>Henrique Albert Schmaiske</b></sub>
+ <br />
+ <br />
+
+[![Twitter Badge](https://img.shields.io/badge/-@hschmaiske-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/hschmaiske)](https://twitter.com/tgmarinho) [![Linkedin Badge](https://img.shields.io/badge/-Henrique-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/henrique-albert-schmaiske/)](https://www.linkedin.com/in/henrique-albert-schmaiske/)
+[![Gmail Badge](https://img.shields.io/badge/-ishenriquealbert@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:ishenriquealbert@gmail.com)](mailto:ishenriquealbert@gmail.com)
+
+---
+
+## 📝 License
+
+This project is under the license [MIT](./LICENSE).
+
+Made with love by Henrique Albert Schmaiske 👋🏻 [Get in Touch!](https://www.linkedin.com/in/henrique-albert-schmaiske/)
+
