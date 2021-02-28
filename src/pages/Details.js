@@ -1,5 +1,6 @@
 import { useParams } from 'react-router-dom';
 
+import { Error } from 'components/Error';
 import { Layout } from 'components/Layout';
 import { Spinner } from 'components/Spinner';
 import { PeopleDetails } from 'components/PeopleDetails';
@@ -14,7 +15,11 @@ export const Details = () => {
     <Layout>
       <h1>Details</h1>
       {isLoading && <Spinner />}
-      {isError && <p>Error: {error.message}</p>}
+      {isError && (
+        <p>
+          Error: <Error error={error} />
+        </p>
+      )}
 
       {data && <PeopleDetails data={data} />}
     </Layout>
