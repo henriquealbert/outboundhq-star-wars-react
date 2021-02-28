@@ -7,6 +7,8 @@ import { Spinner } from 'components/Spinner';
 import { usePeople } from 'hooks/usePeople';
 
 import styles from 'styles/pages/Home.module.css';
+import { Pagination } from 'components/Pagination';
+import { Error } from 'components/Error';
 
 export const Home = () => {
   const [page, setPage] = useState(1);
@@ -27,35 +29,27 @@ export const Home = () => {
         </div>
       )}
 
-      {isError && <p>Error: {error.message}</p>}
-      <section className={styles.peopleList}>
-        {data &&
-          sortedByName.map((people) => (
-            <People key={people.url} people={people} />
-          ))}
-      </section>
+      {isError && (
+        <p>
+          Error: <Error error={error} />
+        </p>
+      )}
 
       {data && (
-        <div>
-          <span>Current Page: {page}</span>
-          <button
-            onClick={() => setPage((old) => Math.max(old - 1, 1))}
-            disabled={page === 1}
-          >
-            Previous Page
-          </button>
-          <button
-            onClick={() => {
-              if (!isPreviousData && data?.next) {
-                setPage((old) => old + 1);
-              }
-            }}
-            // Disable the Next Page button until we know a next page is available
-            disabled={isPreviousData || !data?.next}
-          >
-            Next Page
-          </button>
-        </div>
+        <>
+          <section className={styles.peopleList}>
+            {sortedByName.map((people) => (
+              <People key={people.url} people={people} />
+            ))}
+          </section>
+
+          <Pagination
+            page={page}
+            setPage={setPage}
+            data={data}
+            isPreviousData={isPreviousData}
+          />
+        </>
       )}
     </Layout>
   );
