@@ -1,7 +1,10 @@
+import { useState } from 'react';
+
 import { Layout } from 'components/Layout';
 import { People } from 'components/People';
+import { Spinner } from 'components/Spinner';
+
 import { usePeople } from 'hooks/usePeople';
-import { useState } from 'react';
 
 export const Home = () => {
   const [page, setPage] = useState(1);
@@ -16,7 +19,7 @@ export const Home = () => {
 
   return (
     <Layout>
-      {isLoading && <p>Loading Spinner...</p>}
+      {isLoading && <Spinner />}
 
       {isError && <p>Error: {error.message}</p>}
 

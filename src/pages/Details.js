@@ -1,7 +1,10 @@
-import { Layout } from 'components/Layout';
-import { PeopleDetails } from 'components/PeopleDetails';
-import { usePeopleDetails } from 'hooks/usePeopleDetails';
 import { useParams } from 'react-router-dom';
+
+import { Layout } from 'components/Layout';
+import { Spinner } from 'components/Spinner';
+import { PeopleDetails } from 'components/PeopleDetails';
+
+import { usePeopleDetails } from 'hooks/usePeopleDetails';
 
 export const Details = () => {
   const { id } = useParams();
@@ -10,7 +13,7 @@ export const Details = () => {
   return (
     <Layout>
       <h1>Details</h1>
-      {isLoading && <p>Loading Spinner...</p>}
+      {isLoading && <Spinner />}
       {isError && <p>Error: {error.message}</p>}
 
       {data && <PeopleDetails data={data} />}

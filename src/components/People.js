@@ -2,14 +2,14 @@ import Avatar from 'avataaars';
 import { HomeWorld } from './HomeWorld';
 
 import styles from 'styles/components/People.module.css';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export const People = ({ people }) => {
   const planetID = people.homeworld.replace(/[^0-9]/g, '');
   const peopleID = people.url.replace(/[^0-9]/g, '');
 
   return (
-    <NavLink to={`people/${peopleID}`}>
+    <Link to={`people/${peopleID}`}>
       <div className={styles.people}>
         <Avatar
           avatarStyle="Circle"
@@ -30,6 +30,6 @@ export const People = ({ people }) => {
           <HomeWorld planetID={planetID} />
         </p>
       </div>
-    </NavLink>
+    </Link>
   );
 };
