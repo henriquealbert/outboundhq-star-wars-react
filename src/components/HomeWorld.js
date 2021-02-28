@@ -1,11 +1,10 @@
 import { useHomeWorld } from 'hooks/useHomeworld';
 
-export const HomeWorld = ({ id }) => {
-  const { data, isLoading, isError, error } = useHomeWorld(id);
+export const HomeWorld = ({ planetID }) => {
+  const { data, isError, error } = useHomeWorld(planetID);
 
   return (
     <>
-      {isLoading && null}
       {isError && error.message}
       {data && data.name}
     </>
