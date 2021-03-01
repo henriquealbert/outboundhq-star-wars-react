@@ -1,5 +1,6 @@
 <h1 align="center">
-    <img alt="Star Wars Characters" title="#star-wars-characters" src="./assets/banner.PNG" />
+    <img alt="Star Wars Characters" title="#star-wars-characters" src="./assets/banner.PNG" width="350px"/>
+    <img alt="Star Wars Characters" src="./assets/banner-detail.PNG" width="415px"/>
 </h1>
 
 <h2 align="center">
