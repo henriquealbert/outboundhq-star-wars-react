@@ -3,7 +3,7 @@ import { extractID } from 'helper/extractID';
 import { useQuery, useQueryClient } from 'react-query';
 
 const fetchCharacterDetails = async (id) => {
-  const res = await fetch(`http://swapi.dev/api/people/${id}`);
+  const res = await fetch(`https://swapi.dev/api/people/${id}`);
   return res.json();
 };
 
