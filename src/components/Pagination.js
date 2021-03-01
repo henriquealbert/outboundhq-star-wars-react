@@ -22,18 +22,19 @@ export const Pagination = ({ data, isPreviousData }) => {
           <BiChevronsLeft /> Previous Page
         </Button>
 
-        {pagesArray.map((pageBtn) => (
-          // generating all page buttons
-          <Button
-            type="button"
-            key={pageBtn}
-            onClick={() => setPage(pageBtn)}
-            disabled={page === pageBtn}
-          >
-            {pageBtn}
-          </Button>
-        ))}
-
+        <div className={styles.pagesArray}>
+          {pagesArray.map((pageBtn) => (
+            // generating all page buttons
+            <Button
+              type="button"
+              key={pageBtn}
+              onClick={() => setPage(pageBtn)}
+              disabled={page === pageBtn}
+            >
+              {pageBtn}
+            </Button>
+          ))}
+        </div>
         <Button
           type="button"
           onClick={() => {

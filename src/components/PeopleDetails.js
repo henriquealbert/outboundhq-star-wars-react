@@ -2,62 +2,55 @@ import { Film } from './Film';
 
 import styles from 'styles/components/PeopleDetails.module.css';
 import { MyAvatar } from './MyAvatar';
+import { HomeWorld } from './HomeWorld';
+import { extractID } from 'helper/extractID';
 
 export const PeopleDetails = ({ data }) => {
+  const planetID = extractID(data.homeworld);
+
   return (
     <div className={styles.peopleDetailsWrapper}>
-      <div className={styles.peopleDetails}>
-        <MyAvatar people={data} width="150px" height="150px" />
-        <table className={styles.tableDetails}>
-          <tbody>
-            <tr>
-              <td>Name:</td>
-              <td>{data.name}</td>
-            </tr>
-            <tr>
-              <td>Gender:</td>
-              <td>{data.gender}</td>
-            </tr>
-            <tr>
-              <td>Hair Color:</td>
-              <td>{data.hair_color}</td>
-            </tr>
-            <tr>
-              <td>Eye Color:</td>
-              <td>{data.eye_color}</td>
-            </tr>
-            <tr>
-              <td>Height:</td>
-              <td>{data.height}</td>
-            </tr>
-            <tr>
-              <td>Mass:</td>
-              <td>{data.mass}</td>
-            </tr>
-            <tr>
-              <td>Skin Color:</td>
-              <td>{data.skin_color}</td>
-            </tr>
-            <tr>
-              <td>Birth Year:</td>
-              <td>{data.birth_year}</td>
-            </tr>
-          </tbody>
-        </table>
+      <div className={styles.avatarWrapper}>
+        <MyAvatar people={data} width="200px" height="200px" />
+        <h1>{data.name}</h1>
       </div>
-
-      <div className={styles.listOfFilms}>
-        <p>List of Films:</p>
-        <ul>
-          {data.films.map((film) => {
-            const filmID = film.replace(/[^0-9]/g, '');
-            return (
-              <li key={film}>
-                <Film filmID={filmID} />
-              </li>
-            );
-          })}
-        </ul>
+      <div className={styles.cardDetailsWrapper}>
+        <h2>Character Details:</h2>
+        <div className={styles.cardDetails}>
+          <ul>
+            <li>Gender:</li>
+            <li>Hair Color:</li>
+            <li>Eye Color:</li>
+            <li>Height:</li>
+            <li>Mass:</li>
+            <li>Skin Color:</li>
+            <li>Birth Year:</li>
+            <li>Homeworld:</li>
+            <li>Films:</li>
+          </ul>
+          <ul>
+            <li>{data.gender}</li>
+            <li>{data.hair_color}</li>
+            <li>{data.eye_color}</li>
+            <li>{data.height} cm</li>
+            <li>{data.mass} kg</li>
+            <li>{data.skin_color}</li>
+            <li>{data.birth_year}</li>
+            <li>
+              <HomeWorld planetID={planetID} />
+            </li>
+            <li>
+              {data.films.map((film) => {
+                const filmID = film.replace(/[^0-9]/g, '');
+                return (
+                  <p key={filmID}>
+                    <Film filmID={filmID} />
+                  </p>
+                );
+              })}
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );
