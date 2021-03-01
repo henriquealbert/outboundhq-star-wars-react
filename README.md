@@ -131,7 +131,7 @@ The following tools were used in the construction of the project:
  <sub><b>Henrique Albert Schmaiske</b></sub>
  <br />
 
-[![Twitter Badge](https://img.shields.io/badge/-@hschmaiske-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/hschmaiske)](https://twitter.com/tgmarinho) [![Linkedin Badge](https://img.shields.io/badge/-Henrique-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/henrique-albert-schmaiske/)](https://www.linkedin.com/in/henrique-albert-schmaiske/)
+[![Twitter Badge](https://img.shields.io/badge/-@hschmaiske-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/hschmaiske)](https://twitter.com/hschmaiske) [![Linkedin Badge](https://img.shields.io/badge/-Henrique-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/henrique-albert-schmaiske/)](https://www.linkedin.com/in/henrique-albert-schmaiske/)
 [![Gmail Badge](https://img.shields.io/badge/-ishenriquealbert@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:ishenriquealbert@gmail.com)](mailto:ishenriquealbert@gmail.com)
 
 ---
