@@ -1,6 +1,10 @@
 <h1 align="center">
-   🛸 <a href="#">Star Wars Characters</a>
+    <img alt="Star Wars Characters" title="#star-wars-characters" src="./assets/banner.PNG" />
 </h1>
+
+<h2 align="center">
+   🛸 <a href="#">Star Wars Characters</a>
+</h2>
 
 <h3 align="center">
     A list of all Star Wars characters
