@@ -1,16 +1,18 @@
 import { Layout } from 'components/Layout';
-import { People } from 'components/People';
+import { Characters } from 'components/Characters';
 import { Spinner } from 'components/Spinner';
 import { Pagination } from 'components/Pagination';
 import { Error } from 'components/Error';
-import { usePeople } from 'hooks/usePeople';
+import { useCharacters } from 'hooks/useCharacters';
 import { useAppContext } from 'contexts/AppContext';
 
 import styles from 'styles/pages/Home.module.css';
 
 export const Home = () => {
   const { page } = useAppContext();
-  const { data, isLoading, isError, error, isPreviousData } = usePeople(page);
+  const { data, isLoading, isError, error, isPreviousData } = useCharacters(
+    page
+  );
 
   const sortedByName =
     data &&
@@ -34,9 +36,9 @@ export const Home = () => {
 
       {data && (
         <>
-          <section className={styles.peopleList}>
-            {sortedByName.map((people) => (
-              <People key={people.url} people={people} />
+          <section className={styles.charactersList}>
+            {sortedByName.map((character) => (
+              <Characters key={character.url} character={character} />
             ))}
           </section>
 

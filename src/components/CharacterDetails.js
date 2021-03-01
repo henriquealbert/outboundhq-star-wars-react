@@ -1,17 +1,17 @@
 import { Film } from './Film';
 
-import styles from 'styles/components/PeopleDetails.module.css';
+import styles from 'styles/components/CharacterDetails.module.css';
 import { MyAvatar } from './MyAvatar';
 import { HomeWorld } from './HomeWorld';
 import { extractID } from 'helper/extractID';
 
-export const PeopleDetails = ({ data }) => {
+export const CharacterDetails = ({ data }) => {
   const planetID = extractID(data.homeworld);
 
   return (
-    <div className={styles.peopleDetailsWrapper}>
+    <div className={styles.characterDetailsWrapper}>
       <div className={styles.avatarWrapper}>
-        <MyAvatar people={data} width="200px" height="200px" />
+        <MyAvatar data={data} width="200px" height="200px" />
         <h1>{data.name}</h1>
       </div>
       <div className={styles.cardDetailsWrapper}>

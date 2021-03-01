@@ -1,4 +1,4 @@
-.peopleDetailsWrapper {
+.characterDetailsWrapper {
   display: flex;
 }
 
@@ -47,7 +47,7 @@
 }
 
 @media (max-width: 450px) {
-  .peopleDetailsWrapper {
+  .characterDetailsWrapper {
     flex-direction: column;
   }
   .cardDetailsWrapper {

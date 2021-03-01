@@ -8,6 +8,7 @@ export const Layout = ({ children }) => {
       <Header />
       <main className="container">{children}</main>
       <Footer />
+
       <GithubCorner
         href="https://github.com/henriquealbert/outboundhq-star-wars-react"
         bannerColor="#E6B13B"

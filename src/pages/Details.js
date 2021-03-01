@@ -3,8 +3,8 @@ import { Link, useParams } from 'react-router-dom';
 import { Error } from 'components/Error';
 import { Layout } from 'components/Layout';
 import { Spinner } from 'components/Spinner';
-import { PeopleDetails } from 'components/PeopleDetails';
-import { usePeopleDetails } from 'hooks/usePeopleDetails';
+import { CharacterDetails } from 'components/CharacterDetails';
+import { useCharacterDetails } from 'hooks/useCharacterDetails';
 import { Button } from 'components/Button';
 import { BiLeftArrowAlt } from 'react-icons/bi';
 
@@ -12,7 +12,7 @@ import styles from 'styles/pages/Details.module.css';
 
 export const Details = () => {
   const { id } = useParams();
-  const { data, isLoading, isError, error } = usePeopleDetails(id);
+  const { data, isLoading, isError, error } = useCharacterDetails(id);
 
   return (
     <Layout>
@@ -24,7 +24,8 @@ export const Details = () => {
           </p>
         )}
 
-        {data && <PeopleDetails data={data} />}
+        {data && <CharacterDetails data={data} />}
+
         <div className={styles.backBtn}>
           <Link to="/">
             <Button type="button">

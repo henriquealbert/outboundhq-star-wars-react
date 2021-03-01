@@ -1,12 +1,12 @@
 import { useQuery } from 'react-query';
 
-const fetchPeople = async (page) => {
+const fetchCharacters = async (page) => {
   const res = await fetch(`http://swapi.dev/api/people/?page=${page}`);
   return res.json();
 };
 
-export function usePeople(page) {
-  return useQuery(['People', page], () => fetchPeople(page), {
+export function useCharacters(page) {
+  return useQuery(['Characters', page], () => fetchCharacters(page), {
     keepPreviousData: true
   });
 }

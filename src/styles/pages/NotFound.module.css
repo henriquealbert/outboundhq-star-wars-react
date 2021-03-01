@@ -1,0 +1,17 @@
+.notFound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+.notFound h1 {
+  margin-bottom: 2rem;
+}
+
+.backHomeBtn {
+  margin-top: 4rem;
+}

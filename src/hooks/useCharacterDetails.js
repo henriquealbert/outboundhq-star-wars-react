@@ -2,21 +2,21 @@ import { useAppContext } from 'contexts/AppContext';
 import { extractID } from 'helper/extractID';
 import { useQuery, useQueryClient } from 'react-query';
 
-const fetchPeopleDetails = async (id) => {
+const fetchCharacterDetails = async (id) => {
   const res = await fetch(`http://swapi.dev/api/people/${id}`);
   return res.json();
 };
 
-export function usePeopleDetails(id) {
+export function useCharacterDetails(id) {
   const queryClient = useQueryClient();
   const { page } = useAppContext();
 
-  return useQuery(['PeopleDetails', id], () => fetchPeopleDetails(id), {
+  return useQuery(['CharacterDetails', id], () => fetchCharacterDetails(id), {
     keepPreviousData: true,
     enabled: !!id,
     initialData: () => {
       return queryClient
-        .getQueryData(['People', page])
+        .getQueryData(['Characters', page])
         ?.results?.find((data) => extractID(data.url) === id);
     }
   });
