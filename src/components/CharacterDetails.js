@@ -6,7 +6,7 @@ import { HomeWorld } from './HomeWorld';
 import { extractID } from 'helper/extractID';
 
 export const CharacterDetails = ({ data }) => {
-  const planetID = extractID(data.homeworld);
+  const homeworldID = extractID(data.homeworld);
 
   return (
     <div className={styles.characterDetailsWrapper}>
@@ -37,7 +37,7 @@ export const CharacterDetails = ({ data }) => {
             <li>{data.skin_color}</li>
             <li>{data.birth_year}</li>
             <li>
-              <HomeWorld planetID={planetID} />
+              <HomeWorld homeworldID={homeworldID} />
             </li>
             <li>
               {data.films.map((film) => {
