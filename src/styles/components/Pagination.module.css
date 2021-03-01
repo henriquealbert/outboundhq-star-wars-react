@@ -21,11 +21,6 @@
   margin-right: 0.25rem;
 }
 
- .buttonsWrapper button:last-child {
-  margin-right: 0;
-}
-
-
 @media (max-width: 450px) {
   .pagesArray {
     display: none;
