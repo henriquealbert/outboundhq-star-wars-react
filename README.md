@@ -124,9 +124,7 @@ The following tools were used in the construction of the project:
 ## Author
 
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/59376543?s=460&u=137df36a904881072eb6480658fbaa70c8971b7c&v=4" width="100px;" alt="Henrique Albert Schmaiske"/>
- <br />
  <sub><b>Henrique Albert Schmaiske</b></sub>
- <br />
  <br />
 
 [![Twitter Badge](https://img.shields.io/badge/-@hschmaiske-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/hschmaiske)](https://twitter.com/tgmarinho) [![Linkedin Badge](https://img.shields.io/badge/-Henrique-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/henrique-albert-schmaiske/)](https://www.linkedin.com/in/henrique-albert-schmaiske/)
